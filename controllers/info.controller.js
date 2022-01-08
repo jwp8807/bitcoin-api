@@ -7,7 +7,7 @@ const USER = "";
 function GetBlockCount(req, res) {
   var dataString = `{"jsonrpc":"1.0","id":"curltext","method":"getblockcount","params":[]}`;
   var options = {
-    url: `http://${USER}:${PASS}@192.168.254.47:8332/`,
+    url: `http://${USER}:${PASS}@127.0.0.1:8332/`,
     method: "POST",
     headers: {
         "content-type": "text/plain;"
