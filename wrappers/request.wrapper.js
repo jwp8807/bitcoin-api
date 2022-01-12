@@ -1,6 +1,6 @@
 var request = require("request");
-const USER = "bitcoinrpc";
-const PASS = "f1af987f44adf650d184c0b5258d6b81";
+const USER = "";
+const PASS = "";
 const IP = "44.200.239.119"
 
 function RequestWrapper(req, res) {
