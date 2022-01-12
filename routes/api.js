@@ -2,13 +2,12 @@ const express = require("express");
 const router = express.Router();
 
 const dotenv = require("dotenv");
-const InfoController = require("../controllers/info.controller");
+const BlockchainRpcController = require("../controllers/blockchainrpc.controller");
+const NetworkRpcController = require("../controllers/networkrpc.controller");
 dotenv.config();
 
-router.get("/test", (req, res) => res.json({ msg: "backend works" }));
-
-
-router.get("/getblockcount", InfoController.GetBlockCount);
-
+router.get("/ping", (req, res) => res.json({ msg: "success" }));
+router.get("/getblockcount", BlockchainRpcController.GetBlockCount);
+router.get("/getnetworkinfo", NetworkRpcController.GetNetworkInfo);
 
 module.exports = router;
